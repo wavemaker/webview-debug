@@ -31,11 +31,9 @@ public class WebViewDebug extends CordovaPlugin
         
         Log.v(TAG, "Checking SDK Version: " + Build.VERSION.SDK_INT);
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-        	if ( 0 != (cordova.getActivity().getApplication().getApplicationInfo().flags &= ApplicationInfo.FLAG_DEBUGGABLE ) ) {
-        		Log.v(TAG, "Attempting to enable WebView.setWebContentsDebuggingEnabled");
-        		
-        		WebView.setWebContentsDebuggingEnabled(true);
-            }
+		Log.v(TAG, "Attempting to enable WebView.setWebContentsDebuggingEnabled");
+		
+		WebView.setWebContentsDebuggingEnabled(true);            
         }
     }
 }
